@@ -60,9 +60,7 @@ converse.plugins.add('converse-chatboxviews', {
         const { _converse } = this,
               { __ } = _converse;
 
-        _converse.api.promises.add([
-            'chatBoxViewsInitialized'
-        ]);
+        _converse.api.promises.add(['chatBoxViewsInitialized']);
 
         // Configuration values for this plugin
         // ====================================
@@ -156,7 +154,6 @@ converse.plugins.add('converse-chatboxviews', {
                 }
             });
         });
-
 
         _converse.api.listen.on('chatBoxesInitialized', () => {
             _converse.chatboxviews = new _converse.ChatBoxViews({
